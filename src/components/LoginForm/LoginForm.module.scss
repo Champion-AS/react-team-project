@@ -1,0 +1,132 @@
+@import '../../sass/_mixin.scss';
+
+.loginWrap {
+  @include mob {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+  }
+  @include tablet {
+    padding-top: 160px;
+  }
+}
+
+.loginTitle {
+  @include mob {
+    font-family: var(----primary-font);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  @include tablet {
+    text-align: left;
+  }
+}
+
+.form {
+  @include mob {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  @include tablet {
+    align-items: flex-start;
+  }
+}
+
+.label {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+  color: var(--text-gray);
+  margin-bottom: 20px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField {
+  @include mob {
+    font-family: var(--secondary-font);
+    width: 280px;
+    height: 20px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid var(--decoration-gray);
+  }
+
+  @include tablet {
+    width: 240px;
+  }
+}
+
+.btnWrap {
+  @include mob {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    gap: 32px;
+    margin-top: 20px;
+  }
+}
+
+.btn {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  background-color: var(--orange);
+  color: var(--white-text);
+  border-radius: 30px;
+  border-color: transparent;
+}
+
+.btn:hover,
+.btn:focus {
+  box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+  transition: all 250ms linear;
+}
+
+.registerBtn:hover,
+.registerBtn:focus {
+  box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+  transition: all 250ms linear;
+}
+
+.registerBtn {
+    font-family: var(--secondary-font);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.2;
+      letter-spacing: 0.04em;
+      background-color: var(--orange);
+      color: var(--white-text);
+      border-radius: 30px;
+      border-color: transparent;
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--white-text);
+  color: var(--orange);
+  border: 2px solid #fc842d;
+  width: 181px;
+  padding: 13px 37px;
+  box-shadow: none;
+}

@@ -1,0 +1,69 @@
+@import '../../sass/_mixin.scss';
+
+.header {
+  @include mob {
+    justify-content: space-between;
+    border-bottom: 2px solid #e0e0e0;
+    box-shadow: 0px 1px 10px 0px rgba(233, 229, 229, 0.747);
+    display: flex;
+    padding: 20px 20px 16px;
+      align-items: center;
+  }
+  @include tablet {
+    justify-content: space-between;
+    border-bottom: 2px solid #e0e0e0;
+    box-shadow: 0px 1px 10px 0px rgba(233, 229, 229, 0.747);
+    display: flex;
+    padding: 20px 32px 16px;
+  }
+  @include comp {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: none;
+    border-bottom: none;
+    padding: 80px 16px 0;
+  }
+}
+
+.navigation {
+
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-left: 20px;
+
+
+  @include tablet {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-left: 20px;
+  }
+  
+  @include comp {
+  margin-top: 40px;
+  height: 32px;
+  border-left: 2px solid var(--decoration-gray);
+  }
+}
+
+.item {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #9b9faa;
+  
+  &:global(.active) {
+    color: #000;
+  }
+}
+
+.item:not(:last-child) {
+margin-right: 16px;
+}

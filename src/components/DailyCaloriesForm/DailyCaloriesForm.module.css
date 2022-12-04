@@ -1,0 +1,260 @@
+@import '../../sass/_mixin.scss';
+
+.DailyCaloriesForm {
+  display: block;
+  width: 608px;
+  max-width: 100vw;
+  padding-top: 0px;
+  padding-left: 20px;
+
+}
+
+.title {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.2;
+
+  color: var(--black);
+
+  margin-bottom: 68px;
+
+}
+
+.form {
+  display: flex;
+}
+
+.firstColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+.label {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+
+  color: var(--text-gray);
+}
+
+.labelLastChild {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+
+  color: var(--text-gray);
+  margin-top: 0;
+  margin-bottom: 8px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--decoration-gray);
+}
+
+.input {
+  width: 240px;
+  height: 17px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid var(--decoration-gray);
+  background-color: transparent;
+  margin-bottom: 40px;
+}
+
+/* input:invalid {
+  box-shadow: 0 0 5px 1px rgba(255, 0, 0, 0.373);
+}
+
+input:focus:invalid {
+  box-shadow: none;
+} */
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+
+  color: var(--text-gray);
+
+  margin-left: 4px;
+  margin-right: 28px;
+}
+
+.inputRadio:checked+label {
+  color: var(--orange);
+}
+
+.inputRadio {
+  position: relative;
+  height: 12px;
+  width: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.inputRadio::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-bg-color);
+  border: 1px solid var(--decoration-gray);
+}
+
+.inputRadio:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--orange);
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
+
+.btn {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  background-color: var(--orange);
+  color: var(--white-text);
+  border-radius: 30px;
+  border-color: transparent;
+  cursor: pointer;
+  margin-left: 339px;
+  margin-top: 20px;
+}
+
+.btn:hover,
+.btn:focus {
+  box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+  transition: all 250ms linear;
+}
+
+.startLosingBtn:hover,
+.startLosingBtn:focus {
+  box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+  transition: all 250ms linear;
+}
+
+.startLosingBtn {
+  font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    background-color: var(--orange);
+    color: var(--white-text);
+    border-radius: 30px;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 20px;
+  width: 210px;
+  padding: 13px 25px;
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  .title {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .element {
+    position: relative;
+    flex-direction: row;
+    margin-right: 0px;
+  }
+
+  .label {
+    position: absolute;
+    top: -5px;
+    left: 0;
+  }
+
+  .labelLastChild {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border-bottom: 1px solid transparent;
+  }
+
+  .input {
+    margin-bottom: 32px;
+    padding-left: 118px;
+  }
+
+  .btn {
+    margin-left: 35px;
+    margin-top: 40px;
+  }
+
+  .radioGroup {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .btn {
+    margin-left: 0;
+    margin-bottom: 48px;
+  }
+  .DailyCaloriesForm {
+    padding-left: 32px;
+    padding-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .DailyCaloriesForm {
+    padding-left: 16px;
+    padding-top: 147px;
+  }
+    .startLosingBtn{
+    margin-left: 339px;
+    } 
+}

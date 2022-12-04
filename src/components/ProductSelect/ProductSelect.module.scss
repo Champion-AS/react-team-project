@@ -1,0 +1,76 @@
+@import '../../sass/_mixin.scss';
+.product {
+  @include mob {
+    height: 24px;
+    width: 285px;
+    outline: 0;
+    border: transparent;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    margin-bottom: 32px;
+    margin-top: 80px;
+  }
+  @include tablet {
+    height: 50px;
+    width: 240px;
+    margin-right: 22px;
+    outline: 0;
+    border: transparent;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+
+  }
+  @include comp {
+    height: 50px;
+    width: 240px;
+    margin-right: 48px;
+    outline: 0;
+    border: transparent;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+  }
+}
+.product::placeholder {
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: left;
+
+  letter-spacing: 0.04em;
+  color: #9b9faa;
+}
+
+.productButton {
+  @include tablet {
+    max-width: 240px;
+    max-height: 25px;
+  }
+}
+.root {
+  position: relative;
+}
+.select {
+  background-color: hsl(0, 0%, 88%);
+  overflow: auto;
+  max-height: 350px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 2;
+  button {
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: unset;
+    text-align: left;
+    width: 100%;
+    display: block;
+  }
+}

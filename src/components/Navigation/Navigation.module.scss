@@ -1,0 +1,85 @@
+@import '../../sass/_mixin.scss';
+
+.navigation {
+  display: flex;
+  align-items: center;
+
+  @include mob {
+    gap: 36px;
+    position: absolute;
+    left: 26%;
+    top: 140px;
+    flex-direction: column;
+  }
+  @include tablet {
+    gap: 40px;
+    position: absolute;
+    left: 47%;
+    top: 180px;
+  }
+  @include comp {
+    position: static;
+    height: 32px;
+    align-items: center;
+    border-left: 2px solid #e0e0e0;
+    padding-left: 20px;
+    margin-left: 20px;
+    margin-top: 40px;
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.navlink {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.first {
+    font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 0.92;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+  color: #9b9faa;
+  margin-right: 16px;
+}
+
+.second {
+    font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 0.92;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+  color: #9b9faa;
+  margin-right: 16px;
+}
+
+.first:hover,
+.first:focus {
+  color: #212121;
+}
+.second:hover,
+.second:focus {
+  color: #212121;
+}
+.navigation,
+.navigationBackColor {
+  display: none;
+
+  @include comp {
+    display: block;
+  }
+}
